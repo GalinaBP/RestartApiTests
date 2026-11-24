@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="local">
+    <test name="local-parallel" parallel="methods" thread-count="4">
+        <groups>
+            <run>
+                <exclude name="slow"/>
+                <exclude name="known-bug"/>
+                <exclude name="registration-closed"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="api.*"/>
+        </packages>
+    </test>
+    <test name="local-slow">
+        <groups>
+            <run>
+                <include name="slow"/>
+                <exclude name="known-bug"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="api.*"/>
+        </packages>
+    </test>
+</suite>
