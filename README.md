@@ -1,4 +1,4 @@
-# 0RestrtTest — API tests for Restart
+# RestartApiTests — API tests for Restart
 
 Black-box API tests for the Restart backend: REST Assured 6 + TestNG 7 + Jackson 2.
 Nothing here is copied from the backend repo; the contract is modelled from
